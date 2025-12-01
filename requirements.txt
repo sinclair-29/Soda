@@ -1,9 +1,10 @@
-torch
-numpy
+# 核心计算库
 tqdm
-matplotlib
-datasets==3.6.0
-transformer-lens==2.11.0
-fancy_einsum
-transformers
+numpy
+
+# 模型加载与分析 (Neel Nanda's library)
+# 这会自动安装 transformers, datasets, fancy_einsum 等依赖
+transformer_lens>=1.14.0
+
+# 辅助工具 (通常用于加速 GPU 推理)
 accelerate

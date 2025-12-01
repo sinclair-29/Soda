@@ -1,0 +1,9 @@
+torch
+numpy
+tqdm
+matplotlib
+datasets==3.6.0
+transformer-lens==2.11.0
+fancy_einsum
+transformers
+accelerate

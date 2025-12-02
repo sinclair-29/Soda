@@ -46,7 +46,7 @@ def main():
         "top_k": 128,
         "num_candidates": 32,
         "num_mutations": 1,
-        "max_batch_size": 50,
+        "max_batch_size": 4,
         "bias_correction": False,
         "reg_weight": None,
         "reset_epoch": 50,

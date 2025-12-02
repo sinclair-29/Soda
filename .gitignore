@@ -1,2 +1,4 @@
 .DS_Store
 .idea/
+tiny_model/
+src/__pycache__/

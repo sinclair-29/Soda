@@ -78,8 +78,8 @@ def main():
     # Prepare Inits for SODA
     initialisation_embeds = None
     if "soda" in args.method:
-        # For 'zeros' strategy
-        initialisation_embeds = torch.zeros((cfg.num_targets, cfg.input_len, model.embed.W_E.size(0))).to("cpu")
+        initialisation_embeds = torch.zeros((cfg.num_targets, cfg.input_len, model.embed.W_E.size(0)),
+                                            dtype=model.embed.W_E.dtype).to("cpu")
     
     # Prepare Inits for GCG
     if "gcg" in args.method:

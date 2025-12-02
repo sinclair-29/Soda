@@ -103,8 +103,9 @@ def onehot_search(model, cfg, device, mode="text",
             
         pred_embed_pre = torch.cat([torch.cat([param for param in optimizer.param_groups[0]['params']], dim=1)
                                     for optimizer in state.optimizers], dim=0).to(device)
+
         pred_one_hot = torch.softmax(pred_embed_pre / cfg.temp, dim=-1)
-        pred_embed = (pred_one_hot @ model.embed.W_E)
+        pred_embed = (pred_one_hot.to(model.embed.W_E.dtype) @ model.embed.W_E)
         
         # Forward Pass Logic
         if mode == "text":
